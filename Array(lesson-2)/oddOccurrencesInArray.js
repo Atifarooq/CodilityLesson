@@ -40,7 +40,6 @@ function solution(A) {
     for (let i = 0; i < len; i++) {
         if (dictionary.has(A[i])) dictionary.set(A[i], dictionary.get(A[i]) + 1);
         else dictionary.set(A[i], 1);
-
     }
 
     const oddOccurance = Array.from(dictionary.entries()).filter(item => item[1]%2 != 0);    
