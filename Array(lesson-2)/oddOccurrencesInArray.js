@@ -29,23 +29,6 @@ N is an odd integer within the range [1..1,000,000];
 each element of array A is an integer within the range [1..1,000,000,000];
 all but one of the values in A occur an even number of times.
  */
-// function solution(A) {
-
-//     if (!A || !A.length) return;
-
-//     A.sort();
-//     let len = A.length;
-
-//     for (let i = 0; i < len ; i++) { 
-//         if(A[i] == A[i+1]) {
-//             A.splice(i, 2);
-//             i = -1;
-//             len = A.length;
-//         }
-//     }
-
-//     return A.length ? A[0] : 0;
-// }
 
 function solution(A) {
 
@@ -67,5 +50,4 @@ function solution(A) {
 }
 
 
-console.log(solution([9,3,9,3,9,7,9]));
-console.log(solution([7, 4, 8, 9, 4, 3, 1, 9]));
+console.log(solution([9,3,9,3,9,7,9]));		// correct result 7
