@@ -39,4 +39,20 @@ In your solution, focus on correctness. The performance of your solution will no
 
 function solution(A, K) {
     
+    if (!A || A.length < 2 || !K) return A;
+    let len = A.length;
+
+    do {        
+        A.unshift(A[len -1]);
+        A.pop();
+        K--;
+
+    } while (K > 0);
+
+    return A;
 }
+
+console.log(solution([], 0));
+console.log(solution([3, 8, 9, 7, 6], 3));
+console.log(solution([1, 2, 3, 4], 4));
+console.log(solution([1, 1, 2, 3, 5], 42));     // correct result [3, 5, 1, 1, 2]
