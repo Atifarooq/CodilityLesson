@@ -26,5 +26,15 @@ X ≤ Y.
  */
 
 function solution(X, Y, D) {
-    
+
+  if ((!X || !Number.isInteger(X)) ||
+    (!Y || !Number.isInteger(Y)) ||
+    (!D || !Number.isInteger(D)) || X > Y)
+    return 0;
+
+  return Math.ceil((Y - X)/D);
 }
+
+console.log(solution(10, 85, 30));  
+console.log(solution(1, 5, 2));   //  expected 2
+console.log(solution(5, 105, 3));   //  expected 34
