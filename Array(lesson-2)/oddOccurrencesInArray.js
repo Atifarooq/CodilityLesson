@@ -33,19 +33,7 @@ all but one of the values in A occur an even number of times.
 function solution(A) {
 
     if (!A || !A.length) return;
-
-    let len = A.length;
-    let dictionary = new Map();
-
-    for (let i = 0; i < len; i++) {
-        if (dictionary.has(A[i])) dictionary.set(A[i], dictionary.get(A[i]) + 1);
-        else dictionary.set(A[i], 1);
-    }
-
-    const oddOccurance = Array.from(dictionary.entries()).filter(item => item[1]%2 != 0);    
-
-    dictionary.clear();
-    return oddOccurance.length ? oddOccurance[0][0] : 0;
+    return A.reduce((x, y) => x ^ y)
 }
 
 
