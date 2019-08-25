@@ -33,7 +33,7 @@ all but one of the values in A occur an even number of times.
 function solution(A) {
 
     if (!A || !A.length) return;
-    return A.reduce((x, y) => x ^ y)
+    return A.reduce((x, y) => x ^ y);
 }
 
 
